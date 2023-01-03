@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Estilizando o menu do site*/
+
+.header{
+
+    padding-top: 25px;
+    padding-left: 35px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+.caixa-superior{
+
+    background-image: url(./img/cafe.png);
+    background-size: cover;    
+    height: 90vh;
+}
+
+.text-flicker-in-glow{
+    
+    font-size: 30px;
+    color: blanchedalmond;
+        -webkit-animation: text-flicker-in-glow 3s ease-out both;
+                animation: text-flicker-in-glow 3s ease-out both;
+    
+}
+
+/* Shutter In Horizontal */
+.hvr-shutter-in-horizontal {
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(2px) translateZ(0);
+    transform: perspective(2px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    background: rgb(65, 65, 180);
+    color: white;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    border-radius: 55px;
+    font-size: 15px;
+    font-weight: 1000;
+    text-align: justify;
+    padding: 10px;
+    cursor: pointer;
+   }
+
+   .hvr-shutter-in-horizontal:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: crimson;
+    border-radius: 25px;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+   }
+   .hvr-shutter-in-horizontal:hover, .hvr-shutter-in-horizontal:focus, .hvr-shutter-in-horizontal:active {
+    color: white;
+   }
+   .hvr-shutter-in-horizontal:hover:before, .hvr-shutter-in-horizontal:focus:before, .hvr-shutter-in-horizontal:active:before {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+   }
+
+.focus-in-expand{
+    font-size: 58px;
+    color: blanchedalmond;
+    font-weight: 800;
+    position: relative;
+    top: 200px;
+    margin-left: 35px;
+    margin-top: 210px;
+        -webkit-animation: focus-in-expand 0.7s linear 1s backwards;
+                animation: focus-in-expand 0.6s linear 1s backwards;
+
+}
+
+
+form{
+
+    transition:opacity 1s linear;
+    opacity: 0;
+    background-color: #e4e2e2;
+    border-radius: 10px;
+    float: right;
+    padding: 20px;
+    margin-right: 30px;
+    position: relative;
+    bottom: 70px;
+}
+
+.mostrar-form{
+
+    opacity: 1;
+}
+
+input{
+    display: block;
+    background: #f9f9f9;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    width: 250px;
+    height: 40px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+textarea{
+    display: block;
+    height: 80px;
+    width: 250px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    
+}
+
+.titulo-formulario{
+    font-size: 24px;
+    color: #252b42;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+label{
+    font-weight: 700;
+    font-size: 15px;
+    color: #252b42;
+}
+
+button{
+    font-weight: 500px;
+    font-size: 16px;
+    width: 250px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #40bb15;
+    color: #ffffff;
+    
+}
+
+
+button:hover{
+    background-color: crimson;
+}
+
+
+section{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+
+#titulo-meio{
+    font-size: 40px;
+    color: #252b42;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.hvr-float-shadow{
+    width: 300px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid blanchedalmond;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    
+}
+
+
+.hvr-float-shadow:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '☕';
+    text-align: center;
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    /* W3C */
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform, opacity;
+    transition-property: transform, opacity;
+   }
+   .hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    /* move the element up by 5px */
+   }
+   .hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+   }
+
+
+
+
+.titulo-card{
+    background: blanchedalmond;
+    color: firebrick;
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px 20px 0 0;
+}
+
+
+ul{
+    padding: 20px;
+}
+
+li{
+    margin-bottom: 5px;
+    margin-left: 10px;
+    list-style: none;
+    text-align: center;
+}
+
+footer{
+    
+    background-color:  #333333;
+   
+}
+
+#titulo-inferior{
+    color: #ffffff;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 50px;
+    background-color: rgb(65, 65, 180);
+}
+
+.texto-inferior{
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 50px 50px 50px;
+    letter-spacing: 1px;
+    background-color: rgb(65, 65, 180);
+    
+}
+
+.container-redes-sociais li img{
+    width: 32px;
+    height: 31px;
+    
+}
+
+.container-redes-sociais li{
+
+    display: inline-block;
+    margin-left: 8px;
+    list-style: none;
+    margin-right: 9px;
+    
+}
+
+.container-redes-sociais{
+    position: relative;
+    padding: 15px;
+    background-color: #333333;
+    text-align: center;
+    line-height: 5px;
+}
+
+.container-redes-sociais li:hover{
+  transform: scale(1.4);
+}
+
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-11-25 20:38:48
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * -----------------------------------------------
+ * animation focus-in-expand - Animação do header
+ * ------------------------------------------------
+ */
+ @-webkit-keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+  /* ----------------------------------------------
+ * Generated by Animista on 2022-11-25 20:42:49
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation text-flicker-in-glow header 
+ * ----------------------------------------
+ */
+@-webkit-keyframes text-flicker-in-glow {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    10.1% {
+      opacity: 1;
+      text-shadow: none;
+    }
+    10.2% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    20% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    20.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+    }
+    20.6% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    30% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    30.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+    30.5% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+    30.6% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    45% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    45.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+    50% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+    55% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+    55.1% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    57% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    57.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+    }
+    60% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+    }
+    60.1% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    65% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    65.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+    75% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+    75.1% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    77% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    77.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+    85% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+    85.1% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    86% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    86.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+    100% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+  }
+  @keyframes text-flicker-in-glow {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    10.1% {
+      opacity: 1;
+      text-shadow: none;
+    }
+    10.2% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    20% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    20.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+    }
+    20.6% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    30% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    30.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+    30.5% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+    30.6% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    45% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    45.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+    50% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+    55% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+    55.1% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    57% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    57.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+    }
+    60% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+    }
+    60.1% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    65% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    65.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+    75% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+    75.1% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    77% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    77.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+    85% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+    85.1% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    86% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    86.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+    100% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  
